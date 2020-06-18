@@ -1,15 +1,27 @@
+#Made by: Kouah Mohammed Aymen
+#Computer science student at "National Computer science Engineering School, Algiers (ESI)"
+#E-mail: jm_kouah@esi.dz
+#Github: https://github.com/aymenkouah
+
+#written in the "Python" programming language
+#Requires installaling "tkinter" (TK) and "requests"
+
+#modules and packages
 from tkinter import *
 import json
 import requests
 import math
 
+#Main tab/window
 root = Tk()
 root.title('Weather app')
 root.geometry("400x200")
 
-
-global api_id 
+global api_id  '''the api' id'''
 api_id = 'bff320cb9189c239ac9a6339dc5ef5b2'
+
+
+#functions
 def weather(zipcode, country):
 	global weather_window
 	weather_window = Toplevel()
@@ -50,6 +62,8 @@ def weather_color_get(temp):
 		return 'red'
 	pass
 
+
+#main window contents
 country_code_lbl = Label(root, text="country Code")
 country_code_entry = Entry(root)
 country_code_entry.insert(0, "us")
